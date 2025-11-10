@@ -4,10 +4,11 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AlertCard from "./ui/AlertCard.jsx";
 import ResourceCard from "./ui/ResourceCard.jsx";
 import AlertsPage from "./AlertsPage.jsx";
+import ResourcesPage from "./ResourcesPage.jsx";
 import LoginPage from "./LoginPage.jsx";
 import SignupPage from "./SignupPage.jsx";
+
 function App() {
-  // Fetch alerts and resources from backend (only 3 for home page)
   const { data: alerts, loading: loading1, error: error1 } = useFetch(
     "http://localhost:5000/api/home/alerts"
   );
@@ -15,13 +16,11 @@ function App() {
     "http://localhost:5000/api/home/resources"
   );
 
-  // Handle loading/error states
   if (loading1 || loading2) return <div>Loading...</div>;
   if (error1 || error2) return <div>Error: {error1 || error2}</div>;
 
   return (
     <BrowserRouter>
-      {/* Navigation Bar */}
       <nav>
         <h3>
           <p>ResQnet</p>
@@ -33,17 +32,15 @@ function App() {
         </ul>
       </nav>
 
-      {/* Routes */}
       <Routes>
         <Route
           path="/"
           element={
             <>
               <div className="banner">
-                <h1 align="center">Disaster Response Platform</h1>
+                <h1>Disaster Response Platform</h1>
               </div>
 
-              {/* Alerts Section */}
               <div className="alerts">
                 <h2><Link to="/alerts">Alerts</Link></h2>
                 <div className="card-container">
@@ -57,7 +54,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Resources Section */}
               <div className="resources">
                 <h2><Link to="/resources">Resources</Link></h2>
                 <div className="card-container">
@@ -74,11 +70,8 @@ function App() {
           }
         />
         
-        {/* Alerts Page Route */}
         <Route path="/alerts" element={<AlertsPage />} />
-        
-        {/* Resources Page */}
-        <Route path="/resources" element={<div>Resources Page</div>} />
+        <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
       </Routes>

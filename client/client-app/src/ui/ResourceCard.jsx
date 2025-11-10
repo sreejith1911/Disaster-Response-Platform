@@ -1,4 +1,4 @@
-import React from "react";
+
 import { MapPin, Bed, Utensils, HeartPulse } from "lucide-react";
 import "./ResourceCard.css";
 
