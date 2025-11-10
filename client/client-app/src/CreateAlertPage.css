@@ -1,0 +1,105 @@
+/* -------------------------
+   Create Alert Page
+-------------------------- */
+
+.create-alert-page {
+  background-color: #ffffff;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.create-alert-page h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(10, 103, 218);
+  margin-bottom: 20px;
+}
+
+.create-alert-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create-alert-form label {
+  font-weight: 600;
+  color: #111827;
+  font-size: 14px;
+}
+
+.create-alert-form input,
+.create-alert-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  resize: none;
+  transition: border-color 0.2s ease;
+}
+
+.create-alert-form input:focus,
+.create-alert-form textarea:focus {
+  border-color: rgb(10, 103, 218);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 103, 218, 0.2);
+}
+
+.create-alert-form button {
+  background-color: rgb(10, 103, 218);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.create-alert-form button:hover {
+  background-color: rgb(8, 85, 180);
+}
+
+/* Optional: smaller screen adjustments */
+@media (max-width: 768px) {
+  .create-alert-page {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .create-alert-page h2 {
+    font-size: 20px;
+  }
+}
+/* Slightly increase inner and right padding for input fields and textareas */
+.create-alert-form input,
+.create-alert-form textarea {
+  padding: 10px 14px; /* ✅ adds horizontal padding (left+right) */
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: add a bit of spacing between label and input */
+.create-alert-form label {
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Slightly increase space between each field group */
+.create-alert-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* ✅ creates consistent vertical rhythm */
+}
+

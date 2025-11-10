@@ -7,6 +7,9 @@ import AlertsPage from "./AlertsPage.jsx";
 import ResourcesPage from "./ResourcesPage.jsx";
 import LoginPage from "./LoginPage.jsx";
 import SignupPage from "./SignupPage.jsx";
+import CreateAlertPage from './CreateAlertPage';
+import CreateResourcePage from './CreateResourcePage';
+
 
 function App() {
   const { data: alerts, loading: loading1, error: error1 } = useFetch(
@@ -74,6 +77,9 @@ function App() {
         <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/create-alert" element={<CreateAlertPage />} />
+        <Route path="/create-resource" element={<CreateResourcePage />} />
+
       </Routes>
     </BrowserRouter>
   );

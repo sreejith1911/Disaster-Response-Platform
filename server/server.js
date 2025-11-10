@@ -214,6 +214,37 @@ connectDB()
         res.status(500).json({ error: "Failed to fetch resources" });
       }
     });
+    // POST route - create new alert
+app.post('/api/alerts', async (req, res) => {
+  try {
+    const newAlert = req.body;
+
+    await db.collection('alerts').insertOne(newAlert);
+    res.status(201).json({ message: 'Alert created successfully' });
+  } catch (error) {
+    console.error('Error creating alert:', error);
+    res.status(500).json({ error: 'Failed to create alert' });
+  }
+});
+  // POST route - create new resource
+app.post('/api/resources', async (req, res) => {
+  try {
+    const newResource = req.body;
+    // Validate required fields
+    const requiredFields = ['name', 'location', 'lat', 'lng', 'bedsAvailable', 'lastUpdated'];
+    for (const field of requiredFields) {
+      if (!newResource[field]) {
+        return res.status(400).json({ error: `Missing field: ${field}` });
+      }
+    }
+
+    await db.collection('resources').insertOne(newResource);
+    res.status(201).json({ message: 'Resource created successfully' });
+  } catch (error) {
+    console.error('Error creating resource:', error);
+    res.status(500).json({ error: 'Failed to create resource' });
+  }
+});
 
     // Start server AFTER all routes are defined
     app.listen(5000, () => {

@@ -169,3 +169,71 @@ a:hover {
   margin-bottom: 20px;
   text-align: center;
 }
+/* -------------------------
+   Alerts Page Header
+-------------------------- */
+.alerts-page {
+  padding: 30px 60px; /* ✅ adds breathing space around entire page */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.alerts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px; /* ✅ extra vertical space below heading */
+}
+
+.alerts-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* -------------------------
+   Create Alert Button
+-------------------------- */
+.create-alert-btn {
+  background-color: rgb(10, 103, 218);
+  color: white;
+  border: none;
+  padding: 10px 20px; /* ✅ slightly larger button */
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.create-alert-btn:hover {
+  background-color: rgb(8, 85, 180);
+  transform: translateY(-1px); /* subtle hover effect */
+}
+/* -------------------------
+   Resources Page Header
+-------------------------- */
+.resources-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.create-resource-btn {
+  background-color: rgb(10, 103, 218);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.create-resource-btn:hover {
+  background-color: rgb(8, 85, 180);
+  transform: translateY(-1px);
+}
