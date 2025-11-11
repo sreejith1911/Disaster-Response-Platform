@@ -3,6 +3,7 @@ import connectDB from './db.js';
 import cors from 'cors';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import { ObjectId } from 'mongodb';
 
 const app = express();
 
@@ -245,6 +246,36 @@ app.post('/api/resources', async (req, res) => {
     res.status(500).json({ error: 'Failed to create resource' });
   }
 });
+// GET single alert by ID
+app.get("/api/alerts/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    console.log(" Fetching alert for ID:", id);
+
+    // Your _id values are strings, not ObjectIds
+    // This will match both your custom id (DLR001) and _id (string)
+    const alert = await db.collection("alerts").findOne({
+      $or: [{ _id: id }, { id }]
+    });
+
+    if (!alert) {
+      console.log(" Alert not found for:", id);
+      return res.status(404).json({ error: "Alert not found" });
+    }
+
+    console.log(" Found alert:", alert.alertTitle);
+    res.json(alert);
+  } catch (error) {
+    console.error(" Error fetching alert:", error);
+    res.status(500).json({ error: "Failed to fetch alert" });
+  }
+});
+
+
+// GET single blog by ID
+
+// GET single resource by ID
+
 
     // Start server AFTER all routes are defined
     app.listen(5000, () => {

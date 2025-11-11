@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.7",
     "cors": "^2.8.5",
     "corss": "^2.8.5",
     "lucide-react": "^0.553.0",

@@ -237,3 +237,174 @@ a:hover {
   background-color: rgb(8, 85, 180);
   transform: translateY(-1px);
 }
+/* -------------------------
+   Map Section
+-------------------------- */
+.map-container {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.map-container h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 15px;
+}
+/* -------------------------
+   Google Map Container
+-------------------------- */
+.google-map {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden; /* ensures rounded corners look clean */
+}
+/* ===========================
+   ALERT DETAILS PAGE — LIGHT THEME
+   =========================== */
+
+.detail-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: "Inter", sans-serif;
+  color: #1f2937; /* dark gray text */
+  background-color: #ffffff;
+}
+
+/* Back button */
+.back-btn {
+  background-color: #ffffff;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.back-btn:hover {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+/* Alert detail card */
+.detail-card {
+  background-color: #f8fafc; /* light gray-blue */
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Header inside the detail card */
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.8rem;
+}
+.detail-header h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #111827;
+}
+
+/* Meta info section */
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+.meta-info p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+/* Description section */
+.detail-card h3 {
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+.detail-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+/* Alert level color coding */
+.info-alert {
+  border-left: 6px solid #3b82f6;
+}
+.warning-alert {
+  border-left: 6px solid #facc15;
+}
+.critical-alert {
+  border-left: 6px solid #ef4444;
+}
+.success-alert {
+  border-left: 6px solid #22c55e;
+}
+
+/* Map section */
+.map-container {
+  margin-top: 2rem;
+  background-color: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+.map-container h2 {
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.google-map {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Loading & Error */
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+.error {
+  color: #dc2626;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .detail-page {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .meta-info {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .google-map {
+    height: 300px;
+  }
+}
+

@@ -9,6 +9,7 @@ import LoginPage from "./LoginPage.jsx";
 import SignupPage from "./SignupPage.jsx";
 import CreateAlertPage from './CreateAlertPage';
 import CreateResourcePage from './CreateResourcePage';
+import AlertDetailsPage from './AlertDetailsPage';
 
 
 function App() {
@@ -30,7 +31,9 @@ function App() {
         </h3>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/create">Menu</Link></li>
+          <li><Link to="/alerts">Alerts</Link></li>
+          <li><Link to="/resources">Resources</Link></li>
+          
           <li><Link to="/login">Login</Link></li>
         </ul>
       </nav>
@@ -79,7 +82,8 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/create-alert" element={<CreateAlertPage />} />
         <Route path="/create-resource" element={<CreateResourcePage />} />
-
+        <Route path="/alerts/:id" element={<AlertDetailsPage />} />
+  
       </Routes>
     </BrowserRouter>
   );
