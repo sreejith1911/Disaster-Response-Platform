@@ -23,7 +23,7 @@ function ResourcesPage() {
         </button>
       </div>
 
-      {/* ✅ Google Map Section */}
+      {/*  Google Map Section */}
       <div className="map-container">
         <h2>Available Resources Map</h2>
         <LoadScript googleMapsApiKey="AIzaSyB1ioD8kpDXyC8x32_hCc42tuv398m3t50">
